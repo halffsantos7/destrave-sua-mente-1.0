@@ -1,0 +1,95 @@
+import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Mail } from "lucide-react";
+
+export default function LandingPage() {
+  return (
+    <div className="bg-gradient-to-b from-black to-gray-900 text-white min-h-screen">
+      <header className="bg-yellow-400 text-black text-center py-12 px-4">
+        <h1 className="text-4xl font-bold mb-2">Destrave Sua Mente em 7 Dias</h1>
+        <p className="text-lg font-semibold">Libere o poder da sua mente com Halff Santos</p>
+        <Button className="mt-6 bg-orange-600 hover:bg-orange-700 text-white text-lg px-6 py-3 rounded-xl">
+          QUERO DESBLOQUEAR MINHA MENTE AGORA
+        </Button>
+      </header>
+
+      <div className="bg-red-600 text-white text-center font-bold text-lg py-3">
+        ⚠️ Promoção por tempo limitado! Restam apenas 13 vagas com desconto especial!
+      </div>
+
+      <section className="text-center py-10 px-4">
+        <h2 className="text-2xl font-bold mb-4">Assista ao vídeo de apresentação</h2>
+        <video controls className="mt-6 mx-auto max-w-xl rounded-xl shadow-lg">
+          <source src="/destrave-sua-mente-.avchd.mp4" type="video/mp4" />
+          Seu navegador não suporta a reprodução de vídeo.
+        </video>
+      </section>
+
+      <section className="max-w-3xl mx-auto px-4 py-10">
+        <h2 className="text-2xl font-bold mb-4">Sobre o Produto</h2>
+        <p className="mb-6">
+          O método <strong>"Destrave Sua Mente em 7 Dias"</strong> é um guia prático e transformador criado por
+          <span className="text-yellow-400 font-semibold"> Halff Santos</span>, para quem deseja romper bloqueios
+          mentais, vencer a procrastinação, ganhar clareza e conquistar uma nova mentalidade.
+        </p>
+        <ul className="list-disc list-inside space-y-2 mb-6">
+          <li>✅ Técnicas para reprogramar sua mente</li>
+          <li>✅ Como eliminar pensamentos sabotadores</li>
+          <li>✅ Como ativar seu potencial mental em 7 dias</li>
+          <li>✅ Exercícios práticos de mentalidade</li>
+        </ul>
+        <Button className="bg-orange-600 hover:bg-orange-700 text-white text-lg px-6 py-3 rounded-xl">
+          COMECE HOJE MESMO
+        </Button>
+      </section>
+
+      <section className="bg-gray-800 py-10 px-4">
+        <h2 className="text-2xl font-bold text-center mb-6">O que dizem os alunos</h2>
+        <div className="space-y-6 max-w-2xl mx-auto">
+          <Card>
+            <CardContent className="p-4 italic">“Segui o método por 7 dias e tive um desbloqueio absurdo. Estou muito mais focado!” — <strong>Renan Silva</strong></CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-4 italic">“Nunca pensei que seria possível mudar tanto em tão pouco tempo. Obrigada Halff!” — <strong>Ana Lopes</strong></CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-4 italic">“Minha autoconfiança voltou. Recomendo demais esse guia!” — <strong>João C.</strong></CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section className="py-10 px-4 bg-gray-900">
+        <h2 className="text-2xl font-bold text-center mb-6">Sobre o Criador: Halff Santos</h2>
+        <p className="max-w-3xl mx-auto">
+          <span className="text-yellow-400 font-semibold">Halff Santos</span> é artista, mentor e especialista em desbloqueio mental.
+          Com anos de experiência unindo música, arte e desenvolvimento pessoal, criou esse método após sua própria jornada
+          de superação emocional e reconstrução interna. Seu objetivo é simples: ajudar pessoas comuns a liberarem o poder
+          oculto que já existe dentro delas.
+        </p>
+      </section>
+
+      <section className="max-w-3xl mx-auto px-4 py-10 text-center">
+        <h2 className="text-2xl font-bold mb-4">Garanta Agora Seu Acesso</h2>
+        <p className="mb-6">
+          O método está disponível por um valor promocional e você ainda tem garantia total de 7 dias. Se não destravar sua
+          mente, seu dinheiro é devolvido!
+        </p>
+        <Button className="bg-orange-600 hover:bg-orange-700 text-white text-lg px-6 py-3 rounded-xl">
+          SIM, QUERO MUDAR MINHA MENTE AGORA
+        </Button>
+      </section>
+
+      <footer className="text-center py-8 bg-black">
+        <div className="flex justify-center items-center gap-2 text-yellow-400">
+          <Mail className="w-5 h-5" />
+          <a href="mailto:contato.destravesuamenteoficial@gmail.com" className="hover:underline">
+            contato.destravesuamenteoficial@gmail.com
+          </a>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
